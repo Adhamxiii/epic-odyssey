@@ -13,7 +13,7 @@ You can access a live demo of the application [here](https://epic-odyssey.netlif
 
 ## Screenshot
 
-![Screenshot](./screenshot.png)
+![Screenshot](/screenshot.png)
 
 ## Contact Information
 
