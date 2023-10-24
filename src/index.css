@@ -1,0 +1,317 @@
+@import url(https://fonts.googleapis.com/css?family=Lora:regular,500,600,700,italic,500italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:regular,italic,700);
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond:regular,500,600,700,800,italic,500italic,600italic,700italic,800italic);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background: #faf3e0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  margin-bottom: 1rem;
+  text-align: end;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 80%;
+}
+
+.title h1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: #8b4513;
+  font-family: "EB Garamond";
+  text-align: end;
+  position: relative;
+  right: 1vw;
+}
+
+.brush {
+  width: 240px;
+  height: 45px;
+  position: absolute;
+  right: -10%;
+  bottom: -15%;
+  z-index: -1;
+  object-fit: contain;
+  opacity: 0.65;
+}
+
+.brush img {
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle farthest-corner at 50% 50%,
+    #ffd700 20%,
+    #f4a460 50%,
+    #8b4513 60%
+  );
+  position: absolute;
+  z-index: -1;
+  opacity: 0.25;
+  filter: blur(45px);
+}
+
+.image {
+  height: 500px;
+  width: 500px;
+  z-index: 1;
+  position: relative;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab {
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.tab:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.tab.active {
+  transform: scale(1.2);
+}
+
+.info {
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+.info.hidden {
+  opacity: 0;
+}
+
+.category-container h2 {
+  font-family: "Libre Baskerville";
+  font-size: 24px;
+  color: #333;
+}
+
+.category-container p {
+  font-family: "Lora";
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.examples {
+  margin-bottom: 20px;
+}
+
+.example-container {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.example-container h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .title h1 {
+    font-size: 3rem;
+  }
+
+  .left-side,
+  .right-side {
+    flex: 1 1 50%;
+    width: 50%;
+  }
+
+  .tabs{
+    gap: 20px;
+  }
+
+  .tab{
+    height: 50px;
+    width: 50px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  main {
+    width: 100%;
+    height: auto;
+  }
+
+  .title {
+    text-align: center;
+    align-items: center;
+  }
+
+  .title h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .brush {
+    width: 150px;
+    height: 30px;
+  }
+
+  .content {
+    flex-direction: column-reverse;
+  }
+
+  .left-side, .right-side {
+    width: 100%;
+  }
+
+  .image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .tab {
+    height: 40px;
+    width: 40px;
+  }
+
+  .info {
+    padding: 14px;
+    margin-top: 10px;
+  }
+
+  .category-container h2 {
+    font-size: 20px;
+  }
+
+  .category-container p {
+    font-size: 14px;
+  }
+
+  .example-container h3 {
+    font-size: 16px;
+  }
+
+  .example-container p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .title h1 {
+    font-size: 5rem;
+  }
+  
+  .brush {
+    width: 400;
+    height: 60px;
+    right: -5%;
+  }
+
+  .left-side,.right-side{
+    flex: 1 1 50%;
+    width: 50%;
+  }
+
+  .image{
+    margin: 0 auto;
+  }
+
+.tabs{
+  margin-top: 30px;
+}
+
+  .tab {
+    height: 100px;
+    width: 100px;
+  }
+
+  .info {
+    padding: 25px;
+  }
+
+  .category-container h2 {
+    font-size: 28px;
+  }
+
+  .category-container p {
+    font-size: 20px;
+  }
+
+  .example-container h3 {
+    font-size: 24px;
+  }
+}
