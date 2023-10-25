@@ -11,6 +11,7 @@
 main {
   background: #faf3e0;
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,13 +180,18 @@ main {
   color: #333;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   main {
     width: 100%;
+    height: auto;
   }
 
   .content {
     width: 100%;
+  }
+
+  .title{
+    width: auto;
   }
 
   .title h1 {
@@ -209,7 +215,7 @@ main {
 }
 
 
-@media (max-width: 360px) {
+@media only screen and (max-width: 420px) {
   main {
     width: 100%;
     height: auto;
@@ -218,6 +224,7 @@ main {
   .title {
     text-align: center;
     align-items: center;
+    width: auto;
   }
 
   .title h1 {
@@ -270,7 +277,7 @@ main {
   }
 }
 
-@media (min-width: 1280px) {
+@media only screen and (min-width: 1280px) {
   .title h1 {
     font-size: 5rem;
   }
